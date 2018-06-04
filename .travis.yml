@@ -1,0 +1,28 @@
+# .travis.yml
+language: node_js
+
+node_js:
+- stable
+
+# Hexo source 코드는 source branch에서 작업되고 있어야합니다.
+branches:
+  only:
+  - source
+
+before_install:
+- npm install -g hexo
+
+install:
+- npm install
+
+# 주의: 'YOUR NAME'와 'YOUR EMAIL'를 변경해야합니다.
+before_script:
+- git config --global user.name 'doomsheart'
+- git config --global user.email 'doomsheart@naver.com'
+- sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
+
+# 블로그를 빌드 후 배포합니다.
+script:
+- hexo clean
+- hexo generate
+- hexo deploy
