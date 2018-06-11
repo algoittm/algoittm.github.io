@@ -2,7 +2,7 @@
 language: node_js
 
 node_js:
-- stable
+- 8
 
 # Hexo source 코드는 source branch에서 작업되고 있어야합니다.
 branches:
