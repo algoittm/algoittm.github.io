@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ALGOITTM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="ALGOITTM">
+<meta property="og:url" content="http://algoittm.github.io/index.html">
+<meta property="og:site_name" content="ALGOITTM">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ALGOITTM">
+  
+    <link rel="alternate" href="/atom.xml" title="ALGOITTM" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ALGOITTM</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">THINK, WRITE, BUILD</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://algoittm.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2018-06-13-commit-message-수정하기" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/13/2018-06-13-commit-message-수정하기/" class="article-date">
+  <time datetime="2018-06-13T02:58:21.148Z" itemprop="datePublished">2018-06-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/13/2018-06-13-commit-message-수정하기/">commit 메세지 수정하기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>git을 쓰다보면 커밋 메세지를 수정하고 싶을 때가 있습니다. 커밋 메세지에 추가할 게 생각났다거나, 커밋을 날려보내는 순간에 오타를 발견했다거나 뭐 그런 거요.</p>
+<p>단순히 웹에 접속해서 커밋 메세지를 변경할 수도 있겠지만 커맨드라인에서도 커밋 메세지를 변경할 수 있는 기능이 있습니다.</p>
+<h3 id="아직-commit을-push하지-않은-경우"><a href="#아직-commit을-push하지-않은-경우" class="headerlink" title="아직 commit을 push하지 않은 경우"></a>아직 commit을 push하지 않은 경우</h3><p><code>git commit --amend</code> 명령어를 사용하면 가장 최근의 commit 메세지를 불러오게 됩니다.</p>
+<p>최상단의 커밋 메세지를 수정한 후 <code>git push</code>해서 커밋을 날려보내면 됩니다.</p>
+<h3 id="push한-최근-commit의-메세지를-수정하려는-경우"><a href="#push한-최근-commit의-메세지를-수정하려는-경우" class="headerlink" title="push한 최근 commit의 메세지를 수정하려는 경우"></a>push한 최근 commit의 메세지를 수정하려는 경우</h3><p><code>git commit --amend</code> 명령어를 사용하는 것은 동일하지만 <code>git push --force</code> 명령어를 사용해서 강제로 덮어씌워야 합니다.</p>
+<h3 id="최근보다-이전의-commit-메세지를-수정하려는-경우"><a href="#최근보다-이전의-commit-메세지를-수정하려는-경우" class="headerlink" title="최근보다 이전의 commit 메세지를 수정하려는 경우"></a>최근보다 이전의 commit 메세지를 수정하려는 경우</h3><p><code>git rebase -i HEAD~n</code> 명령어를 사용해서 최근으로부터 <code>n</code> 개의 commit 메세지를 불러올 수 있습니다.</p>
+<p>불러온 commit 메세지들은 EDITOR 최상단에 자리하고 있으며 수정해서 저장한 후 <code>git push --force</code> 명령어를 사용해서 덮어씌워야 합니다.</p>
+<hr>
+<p>via </p>
+<ul>
+<li><p>original post from <a href="https://canor.cf/2018/06/13/commit-message-수정하기/" target="_blank" rel="noopener">Fabulam Canor</a></p>
+</li>
+<li><p><a href="https://help.github.com/articles/changing-a-commit-message/" target="_blank" rel="noopener">Changing a commit message - User Documentation</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://algoittm.github.io/2018/06/13/2018-06-13-commit-message-수정하기/" data-id="cjicj0qgf0003xe3yb48omd7y" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018-06-11-12-25-00-about_torbjorn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/11/2018-06-11-12-25-00-about_torbjorn/" class="article-date">
+  <time datetime="2018-06-11T03:25:00.000Z" itemprop="datePublished">2018-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/11/2018-06-11-12-25-00-about_torbjorn/">토르비욘에 관하여</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id=""><a href="#" class="headerlink" title=""></a><img src="/images/2018-06-11-12-35-00-about_torbjorn/01_torr_image.png" alt="일단 만들어! 그리고 부셔!"></h1><p>딱봐도 뭔가가 느껴지지 않는가?</p>
+<p>애꾸눈에 땋은 수염에 기계로 교체된 왼팔이라, 어줍잖게 대장간 노크하고 들어가서 <code>&quot;저기... 기술을 배우러 왔는데요...&quot;</code> 하면 바로 몽키스패너가 날라올게 분명하기 때문에, 대장간 첫날부터 말없이 소 여물먹이며 매일 아침 30분 일찍 출근해서 빤딱빤딱히 닦아놓고 있어야 1년 정도 지났을 때<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;오후에 제작문의가 들어왔는데, 이따 같이 현장 한번 가지?&quot;</span><br></pre></td></tr></table></figure></p>
+<p>라고 말을 듣고선 그제서야 봉고차 조수석에서 설렘과 어색함 속에 부푼마음 잡고 그 다음날 부터 볼트와 너트부터 겨우 만질 수 있는 그런 느낌의 캐릭터이다.</p>
+<p><img src="/images/2018-06-11-12-35-00-about_torbjorn/02_tower.jpg" alt="오... 가능성이 어마어마하군."></p>
+<p>필자가 좋아하는 대사는 다음과 같다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">일단 만들어! 그리고, 부숴!</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">너는 대단한 일을 해낼 거란다.</span><br><span class="line">오... 가능성이 어마어마하군.</span><br><span class="line">아이고! 우리 이쁜이!</span><br><span class="line">하하하하. 됐다! 이제 네 할 일을 하거라.</span><br><span class="line">네 실력을 보여줘!</span><br></pre></td></tr></table></figure>
+<p>대부분 포탑에게 말을 거는 모습은 우리가 컴퓨터에게 말하는 모습과 닮아있다.<br>그는 또한 엔지니어로써 철학이 확고하여 보인다.</p>
+<p><img src="/images/2018-06-11-12-35-00-about_torbjorn/03_torr_engineer.png" alt="엔지니어라면!"></p>
+<h2 id="그렇다-우리는-피해가면-안된다-문제를-존중하고-해결해-나아가야-진정한-엔지니어가-될-수-있을-것이다"><a href="#그렇다-우리는-피해가면-안된다-문제를-존중하고-해결해-나아가야-진정한-엔지니어가-될-수-있을-것이다" class="headerlink" title="그렇다. 우리는 피해가면 안된다. 문제를 존중하고 해결해 나아가야 진정한 엔지니어가 될 수 있을 것이다. "></a>그렇다. 우리는 피해가면 안된다. 문제를 존중하고 해결해 나아가야 진정한 엔지니어가 될 수 있을 것이다. </h2><p>그러니 일단 글 좀 쓰자 제발 좀 피해가지 말고</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://algoittm.github.io/2018/06/11/2018-06-11-12-25-00-about_torbjorn/" data-id="cjicj0qg40001xe3ycicmowpk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lifestyle/">lifestyle</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018-06-05-09-52-00-algoittm_guide" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/05/2018-06-05-09-52-00-algoittm_guide/" class="article-date">
+  <time datetime="2018-06-05T00:52:00.000Z" itemprop="datePublished">2018-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/05/2018-06-05-09-52-00-algoittm_guide/">알고이뜸 글쓰기 가이드</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hexo-블로그-글쓰기-가이드"><a href="#Hexo-블로그-글쓰기-가이드" class="headerlink" title="Hexo 블로그 글쓰기 가이드"></a>Hexo 블로그 글쓰기 가이드</h1><p>알고이뜸 블로그는 Hexo라는 node.js의 블로그 프레임워크를 이용하여 Markdown을 사용하여 글을 쓸 수 있는 블로그 입니다.</p>
+<p><a href="https://github.com/algoittm/algoittm.github.io" target="_blank" rel="noopener">algoittm.github.io 깃허브 페이지</a>를 보면 두개의 Branch(source, master)가 있는데 우리는 source 브랜치에 포스트를 올리면 됩니다.</p>
+<p>순서는 다음과 같습니다.</p>
+<ol>
+<li>자신의 레포에 포크를 뜬다.<ul>
+<li><img src="/images/2018-06-05-09-52-00-algoittm_guide/01_fork.png" alt="01_fork"></li>
+</ul>
+</li>
+<li>포크를 했으면 <a href="https://github.com/HyOsori/hyosori.github.io" target="_blank" rel="noopener">오소리 기술 블로그</a>의 README를 참고한다! 다만 각 글에 들어가는 사진들은 images폴더 아래에 다음과 같은 형식 <code>[YYYY-MM-DD-HH-MM-SS-POST_TITLE]</code> 이름의 폴더를 만들고 거기에 이미지파일들을 넣어주세요. 이미지 업로드 후엔 <code>/images/YYYY-MM-DD-HH-MM-SS-POST_TITLE/imageName.png</code>와 같이 사용하심 됩니다.</li>
+<li>혹 마크다운이 낯선 분들은 <a href="https://gist.github.com/ihoneymon/652be052a0727ad59601" target="_blank" rel="noopener">마크다운 사용법</a> 링크를 참고하시면 도움이 많이 되실겁니다. (vscode는 마크다운 미리보기 기능이 있어 실시간으로 자신의 md파일을 확인하기 용이합니다.)</li>
+</ol>
+<h1 id="Special-Thanks-To"><a href="#Special-Thanks-To" class="headerlink" title="Special Thanks To"></a>Special Thanks To</h1><p><a href="https://github.com/CameliaOvO" target="_blank" rel="noopener">CameliaOvO</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://algoittm.github.io/2018/06/05/2018-06-05-09-52-00-algoittm_guide/" data-id="cjicj0qfr0000xe3yqodnziih" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/guide/">guide</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guide/">guide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lifestyle/">lifestyle</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/guide/" style="font-size: 10px;">guide</a> <a href="/tags/lifestyle/" style="font-size: 10px;">lifestyle</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/06/13/2018-06-13-commit-message-수정하기/">commit 메세지 수정하기</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/11/2018-06-11-12-25-00-about_torbjorn/">토르비욘에 관하여</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/05/2018-06-05-09-52-00-algoittm_guide/">알고이뜸 글쓰기 가이드</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 algoittm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
