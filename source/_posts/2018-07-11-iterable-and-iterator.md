@@ -1,6 +1,7 @@
 ---
 layout: post
 title: iterable
+date: 2018-07-11
 tags: 
  - study
  - python
