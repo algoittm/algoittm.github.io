@@ -43,4 +43,4 @@ for i, item in enumerate(['apple','banana','tomato'])
 
 ### 유의사항
 
-`enumerate()`는 어찌됐든 반복문이기 때문에 입력하는 시퀀스는 [iterable](https://algoittm.github.io/2018/07/11/이터러블과-이터레이터/)이어야 합니다.
+`enumerate()`는 어찌됐든 반복문이기 때문에 입력하는 시퀀스는 [iterable](https://algoittm.github.io/2018/07/10/이터러블과-이터레이터/)이어야 합니다.
