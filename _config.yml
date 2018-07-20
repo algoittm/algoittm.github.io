@@ -82,3 +82,13 @@ deploy:
   type: git
   repo: https://__GITHUB_TOKEN__@github.com/algoittm/algoittm.github.io.git
 branch: master
+
+# markdown
+markdown:
+  html: true
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
