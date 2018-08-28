@@ -1,6 +1,6 @@
 ---
 title: 얼굴 검출의 맛
-date: 2018-08-26 16:15:00
+date: 2018-08-28 16:15:00
 author: doomsheart
 githublink: https://github.com/doomsheart
 tags: [OpenCV, Python]  
@@ -84,8 +84,35 @@ Cascade Classifier는 자신이 검출하려는 xml을 쓰면 됩니다. 여기�
 
 scaleFactor는 각 이미지 스케일마다 이미지가 얼마나 줄어들지, minNeighbors는 각 사각형 후보(얼굴 검출 범위)를 유지해야할 이웃 사각형의 개수를 의미합니다. 
 
-사진에서 얼굴을 검출하는 방식중 하나는 사진보다 작은 액자를 놓고 액자를 왼쪽위서부터 옆으로 조금씩 움직이며 액자범위안에 얼굴이 포함됐을 때 얼굴을 검출하는 방식이 있습니다. 이를 이미지 피라미드(image pyramid) 방식이라 합니다.
+사진에서 얼굴을 검출하는 방식중 하나는, 사진보다 작은 액자 하나를 사직위에 놓고 액자를 왼쪽위에서부터 옆으로 조금씩 움직이며 액자안에 얼굴이 나왔을때 얼굴을 검출하는 방식이 있습니다. 이를 이미지 피라미드(image pyramid) 방식이라 합니다.
 
-근데 액자를 조금씩 옮기다보면 같은 얼굴인데도 액자 범위안에 여러번 나타날때가 있습니다. 따라서 얼굴이 하나라도 그 얼굴 주위에 얼굴이라 생각된 액자 범위가 있을테고 이를 막기위해 범위끼리 겹치는 것을 minNeighbors를 통해 조절해 주는 겁니다. 
+근데 액자를 조금씩 옮기다보면 같은 얼굴인데도 액자 범위안에 여러번 나타날때가 있습니다.(왼쪽얼굴, 정면얼굴, 오른쪽 얼굴 등등...) 따라서 얼굴 주위에 얼굴이라 생각된 액자의 위치가 있을테고, 따라서 하나의 얼굴에 여러개의 액자 위치가 나올 수 있습니다. 이를 막기위해 범위끼리 겹치는 것을 minNeighbors를 통해 조절해 주는 겁니다. 
 
 위 함수를 실행하면 그의 반환값은 얼굴 범위의 좌표입니다.
+
+## 4. 범위 표시
+
+각 프레임마다 보여줘야 함으로 재사용이 많으니 이 또한 함수로 정의하겠습니다.
+
+```Python
+def show_img(img, faces):
+    if len(faces) != 0:
+        for (x, y, w, h) in faces:
+            cv.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 1)
+    cv.imshow('FaceDetection', img)
+```
+위의 `get_frame(video_capture, frame)`에서 반환한 img와 `get_area_of_frame_face_recognition(img, face_cascade)`에서 반환한 faces를 인자로 받고있는 함수입니다. 
+
+우선 얼굴이 검출되었는지를 알기위해 리스트 faces가 비었는지를 확인합니다. 얼굴이 검출이 안되었다면 faces는 비어서 길이가 0이겠죠?(데헷)
+
+얼굴이 검출되었다면 각 범위마다 cv.rectangle()을 이용하여 사진에 얼굴영역에 네모를 그려줍니다.
+
+그다음 cv.imshow()를 통해 결과사진을 보여줍시다.
+
+이렇게 해서 동영상을 프레임단위로 자르고 얼굴을 검출하는 방법을 알아보았습니다. 
+
+------
+
+via
+
+[Osori FaceCluster](https://github.com/HyOsori/FaceClusterer/blob/master/doomsheart/OpenCV_detection/video_face_recongition.py)
