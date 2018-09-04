@@ -92,3 +92,20 @@ markdown:
     - markdown-it-ins
     - markdown-it-sub
     - markdown-it-sup
+
+nofollow:
+    enable: true
+    exclude:
+    - exclude1.com
+    - exclude2.com
+
+# sitemap auto generator
+sitemap:
+    path: sitemap.xml
+
+# rss feed auto generator
+feed:
+  type: atom
+  path: feed.xml
+  limit: 20
+  hub:
