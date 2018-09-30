@@ -32,7 +32,7 @@ tags: [Linux][kernel]
 
 소스코드가 공개 되어 있다보니 많은 개발자들이 개인에 맞게 수정하거나 새로운 기술을 추가 하거든요.
 
-![2018-09-30-kernel_guide1](/images/2018-09-30-kernel_guide/2018-09-30-kernel_guide01.png)
+![kernel_guide1](/images/2018-09-30-kernel_guide/2018-09-30-kernel_guide01.png)
 
 터미널 창을 열고 "**uname -r**" 이라고 치면 현재 사용중인 리눅스의 커널 버전을 출력 해줍니다.
 
@@ -69,7 +69,7 @@ tags: [Linux][kernel]
 
 디바이스 드라이버 과목을 수강하면서 아~ 하고 알게 되었습니다.
 
-![2018-09-30-kernel_guide02](/images/2018-09-30-kernel_guide/2018-09-30-kernel_guide02.jpg)
+![kernel_guide02](/images/2018-09-30-kernel_guide/2018-09-30-kernel_guide02.jpg)
 
 
 
