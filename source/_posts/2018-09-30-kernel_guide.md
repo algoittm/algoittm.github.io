@@ -1,5 +1,5 @@
 ---
-title: 커널 내용
+title: 커널에서 무엇을 배우나요?~
 date: 2018-09-30 23:50:00
 author: Ho95
 githublink: https://github.com/Ho95
