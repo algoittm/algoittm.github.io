@@ -3,10 +3,8 @@ title:Low level I/O with C
 date: 2018-10-10 22:50:00 
 author: Ho95
 githublink: https://github.com/Ho95
-tags: [C][Device_Driver]  
+tags: [C,Device_Driver]  
 ---
-
-
 
 # 저수준의 파일 입출력 with C
 
@@ -28,7 +26,7 @@ C의 파일 입출력은 2가지 종류가 있습니다.
 
 고수준과 저수준 2가지입니다. 차이점은 얼마나 더 사람에 가까운가 입니다.
 
-![](/images/2018-10-10-low_level_IO_with_C/FILE_1.jpg)
+![FILE_1](https://github.com/Ho95/algoittm.github.io/blob/source/source/images/2018-10-10-low_level_IO_with_C/FILE_1.JPG?raw=true)
 
 ​										출처: www.soen.kr
 
