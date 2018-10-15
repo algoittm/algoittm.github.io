@@ -28,7 +28,7 @@ core는 실제 H/W의 데이타시트를 보고 코드를 작성 해줘야 합�
 
 ​	   1:1 사상(맵핑) 시켜 놓은 것.
 
-![userapp1](/images/2018-10-15-how_to_use_dd_in_user_app/userapp1.JPG)
+![userapp1](https://raw.githubusercontent.com/Ho95/algoittm.github.io/source/source/images/2018-10-15-how_to_use_dd_in_user_app/userapp1.JPG)
 
 (출처: [IT EXPERT 리눅스 디바이스 드라이버])
 
