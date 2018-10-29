@@ -151,6 +151,22 @@ unregister_chrdev()로 chrdevs[주번호]자리에 등록한 Wrapper를 삭제(?
 
 
 
+## module_init(), module_exit()
+
+insmod, rmmod 명령어 실행시 수행되는 함수 입니다.
+
+**module_init()**의 경우 모듈 적재시 실행되며 ()안에 함수를 인자로 받아, 그 함수를 호출 해줍니다.
+
+호출된 함수에서는 register_chrdev나 register_blkdev를 이용하여 디바이스 드라이버를 등록해주고
+
+하드웨어를 사용하기 위해 초기화를 해줍니다. 필요하다면 kmalloc()함수를 이용하여 메모리를 할당 할 수있습니다.
+
+**module_exit()**의 경우 적재된 모듈을 제거시 호출됩니다.  unregister_chrdev, unregister_blkdev를 사용합니다.
+
+할당한 메모리가 있으면 해제 해줍니다.
+
+
+
 ## (un)register_chrdev()함수
 
 register_chrdev()함수와 unregister_chrdev()함수는 <linux/fs.h>에 정의 되어있습니다.
