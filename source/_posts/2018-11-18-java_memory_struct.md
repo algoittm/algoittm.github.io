@@ -3,7 +3,7 @@ title: java memory struct + etc
 date: 2018-11-18 11:30:30
 author: Ho95
 githublink: https://github.com/Ho95
-tags: [Device_Driver]  
+tags: [java]  
 ```
 
 
