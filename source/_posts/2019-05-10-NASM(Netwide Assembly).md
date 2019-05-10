@@ -36,11 +36,11 @@ GAS와 NASM 서로 문법이 조금 다릅니다.  GAS에서는 레지스터를 
 
 수업 시간에 기본적인 설명은 들었으나... 막상 어셈블러로 코딩을 하려니 막막했습니다.                                                               게다가... 학교에서 centos 7로 실습할때는 문제 없이 실행파일이 생성 되었는데,                                                                         집에서 쓰는 우분투 18.04버전의 gcc에서는 아래 사진과 같은 오류가 떴습니다.. 
 
-![](../images/2019-05-10-NASM(Netwide Assembly)/error.jpg)
+![](https://raw.githubusercontent.com/Ho95/algoittm.github.io/source/source/images/2019-05-10-NASM(Netwide%20Assembly)/error.jpg)
 
 구글링 해보니 gcc 설정 떄문에 그러니 -no-pie 옵션을 추가하라고 하네요.                                                                                   시키는대로 하니 우분투에서도 잘 돌아갑니다.
 
-![](../images/2019-05-10-NASM(Netwide Assembly)/hw2_3.01.jpg)
+![](https://raw.githubusercontent.com/Ho95/algoittm.github.io/source/source/images/2019-05-10-NASM(Netwide%20Assembly)/hw2_3.01.jpg)
 
 열심히 이리저리 궁리해서 완성 코드입니다. 
 
@@ -68,7 +68,7 @@ dec는 inc의 반대입니다. -=1입니다.(i--)                               
 
 실제 실행 결과는 아래 사진과 같습니다.
 
-![](../images/2019-05-10-NASM(Netwide Assembly)/hw2_3.02.png)
+![](https://raw.githubusercontent.com/Ho95/algoittm.github.io/source/source/images/2019-05-10-NASM(Netwide%20Assembly)/hw2_3.02.png)
 
 A-Z까지 출력 되었습니다. 짝짝짝
 
@@ -80,7 +80,7 @@ A-Z까지 출력 되었습니다. 짝짝짝
 
 이 과제의 코드도 대부분은 과제1과 같습니다.                                                                                                                입력을 위한 임시buf와 입력 시스템 콜이 출력 된 것이 차이점 입니다.
 
-![](../images/2019-05-10-NASM(Netwide Assembly)/hw2_4.01.png)
+![](https://raw.githubusercontent.com/Ho95/algoittm.github.io/source/source/images/2019-05-10-NASM(Netwide%20Assembly)/hw2_4.01.png)
 
 좀 길죠? .bss는 초기화 되지 않은 전역변수를 의미합니다. resb는 reserve byte의 약자이며                              1은 크기를 나타냅니다. 1byte의 공간을 잡아 둔다는 의미 입니다.
 
@@ -92,7 +92,7 @@ jmp printCR로 줄바꿈을 입력 받은 만큼 해주고, jmp printA로 A를 �
 
 실행 결과는 아래와 같습니다.
 
-![](../images/2019-05-10-NASM(Netwide Assembly)/hw2_4.02.png)
+![](https://raw.githubusercontent.com/Ho95/algoittm.github.io/source/source/images/2019-05-10-NASM(Netwide%20Assembly)/hw2_4.02.png)
 
 비록 간단한 코드이지만 어셈블리어로 코딩 하려니 저에겐 많이 어려웠습니다.
 
