@@ -1,10 +1,10 @@
-```
+---
 title:             딥러닝을 위한 정말정말 기초 지식1
 date:              2019-07-18 01:12:00
 author:            ho95
 githublink:        https://github.com/Ho95
 tags:              [cuda,machinelearning]
-```
+---
 
 
 

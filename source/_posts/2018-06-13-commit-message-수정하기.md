@@ -1,7 +1,6 @@
 ---
 layout: post
 title: commit 메세지 수정하기
-date: 2018-06-13
 author: canor
 date: 2018-06-13
 githublink: https://canorus.github.io
