@@ -2,7 +2,7 @@
 language: node_js
 
 node_js:
-- stable
+- 8
 
 # Hexo source 코드는 source branch에서 작업되고 있어야합니다.
 branches:
@@ -10,19 +10,14 @@ branches:
   - source
 
 before_install:
-# - npm install --save core-js@^3
-# - npm install -g hexo
-# - npm un hexo-renderer-marked --save
-# - npm i hexo-renderer-markdown-it --save
-# - npm install hexo-autonofollow --save
-# - npm install --save hexo-auto-canonical
-# - npm install hexo-generator-seo-friendly-sitemap --save
-# - npm install hexo-generator-feed --save
-# - npm install jquery
-# - npm install --save hexo-jquery
-# - npm install -g npm-check-updates
-# - ncu -u
-# - npm update
+- npm install -g hexo
+- npm un hexo-renderer-marked --save
+- npm i hexo-renderer-markdown-it --save
+- npm install hexo-autonofollow --save
+- npm install --save hexo-auto-canonical
+- npm install hexo-generator-seo-friendly-sitemap --save
+- npm install hexo-generator-feed --save
+
 
 install:
 - npm install
@@ -36,5 +31,5 @@ before_script:
 # 블로그를 빌드 후 배포합니다.
 script:
 - hexo clean
-- hexo g
-- hexo d
+- hexo generate
+- hexo deploy
