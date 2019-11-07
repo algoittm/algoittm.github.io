@@ -26,6 +26,6 @@
     "hexo-auto-excerpt": "^1.1.2",
     "hexo-generator-author": "0.0.5",
     "hexo-generator-feed": "^1.2.2",
-    "hexo-generator-seo-friendly-sitemap": "0.0.21",
+    "hexo-generator-seo-friendly-sitemap": "0.0.21"
   }
 }
