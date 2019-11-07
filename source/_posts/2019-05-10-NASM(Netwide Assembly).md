@@ -1,4 +1,3 @@
-```
 ---
 title:             학교 NASM 과제
 date:              2019-05-10 19:50:00
@@ -6,7 +5,6 @@ author:            ho95
 githublink:        https://github.com/Ho95
 tags:              [Assembly, Linux]
 ---
-```
 
 # NASM(Netwide Assembly)
 

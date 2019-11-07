@@ -1,4 +1,3 @@
-```
 ---
 title:             C언어 문자 입출력
 date:              2019-03-10 15:50:00
@@ -6,7 +5,6 @@ author:            Ho95
 githublink:        https://github.com/Ho95
 tags:			         [C]
 ---
-```
 
 # 시작
 
