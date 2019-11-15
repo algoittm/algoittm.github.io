@@ -8,7 +8,8 @@ branches:
   only:
   - source
 
-# before_install:
+before_install:
+- npm audit fix
 # - npm install -g hexo
 # - npm un hexo-renderer-marked 
 # - npm i hexo-renderer-markdown-it
@@ -26,14 +27,16 @@ before_script:
 - git config --global user.email 'junarwohn@github.com'
 - git config --global user.name 'Travis-CI'
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
+- npm audit --json >> $TRAVIS_BUILD_DIR/audit/report.json
 
-after_script:
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - node ./node_modules/grunt-cli/bin/grunt release
+# after_script:
+#   - git config credential.helper "store --file=.git/credentials"
+#   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+#   - node ./node_modules/grunt-cli/bin/grunt release
 
 # 블로그를 빌드 후 배포합니다.
 script:
+- npm run audit:process
 - hexo clean
 - hexo generate
 - hexo deploy
