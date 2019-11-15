@@ -27,7 +27,7 @@ before_script:
 - git config --global user.email 'junarwohn@github.com'
 - git config --global user.name 'Travis-CI'
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
-- npm audit --json >> $TRAVIS_BUILD_DIR/audit/report.json
+- npm audit — json >> $TRAVIS_BUILD_DIR/audit/report.json || true
 
 # after_script:
 #   - git config credential.helper "store --file=.git/credentials"
