@@ -1,10 +1,10 @@
-```
+---
 title:             Alexa Custom skill 참고
 date:              2019-10-13 16:05:00
 author:            ho95
 githublink:        https://github.com/Ho95
 tags:              [Amazon, Alexa, raspberryPi]
-```
+---
 
 # 시작
 

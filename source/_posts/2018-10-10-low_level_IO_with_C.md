@@ -1,9 +1,9 @@
 ---
-title:Low level I/O with C
+title: Low level I/O with C
 date: 2018-10-10 22:50:00 
 author: Ho95
 githublink: https://github.com/Ho95
-tags: [C,Device_Driver]  
+tags: [C, Device_Driver]  
 ---
 
 # 저수준의 파일 입출력 with C
