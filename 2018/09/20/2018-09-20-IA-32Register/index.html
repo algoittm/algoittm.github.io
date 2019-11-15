@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>IA-32 레지스터 메모. | ALGOITTM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="General Purpose Register (범용 레지스터 ,x86 cpu) 1 2 3 4 5 6 7 8   -상수, 주소값을 저장시 사용된다.  -16비트의 크기를 가진다.(과거에는 16비트를 한번에 쓸일이 없음)  -32비트 이상에서는 레지스터 앞에 확장이라는 뜻의 Extended(E)가   붙고 크기는 0~31비트를 차지하는 32비트이다. (EAX,">
+<meta name="keywords" content="Assembly">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IA-32 레지스터 메모.">
+<meta property="og:url" content="http://algoittm.github.io/2018/09/20/2018-09-20-IA-32Register/index.html">
+<meta property="og:site_name" content="ALGOITTM">
+<meta property="og:description" content="General Purpose Register (범용 레지스터 ,x86 cpu) 1 2 3 4 5 6 7 8   -상수, 주소값을 저장시 사용된다.  -16비트의 크기를 가진다.(과거에는 16비트를 한번에 쓸일이 없음)  -32비트 이상에서는 레지스터 앞에 확장이라는 뜻의 Extended(E)가   붙고 크기는 0~31비트를 차지하는 32비트이다. (EAX,">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-15T08:52:08.087Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IA-32 레지스터 메모.">
+<meta name="twitter:description" content="General Purpose Register (범용 레지스터 ,x86 cpu) 1 2 3 4 5 6 7 8   -상수, 주소값을 저장시 사용된다.  -16비트의 크기를 가진다.(과거에는 16비트를 한번에 쓸일이 없음)  -32비트 이상에서는 레지스터 앞에 확장이라는 뜻의 Extended(E)가   붙고 크기는 0~31비트를 차지하는 32비트이다. (EAX,">
+  
+    <link rel="alternate" href="/atom.xml" title="ALGOITTM" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/bigfoot.js"></script>
+    <div id="banner"></div>
+    <div id="header-outer" class="outer">
+        <div id="header-title" class="inner">
+            <h1 id="logo-wrap">
+                <a href="/" id="logo">
+                    ALGOITTM
+                </a>
+            </h1>
+            
+                <h2 id="subtitle-wrap">
+                    <a href="/" id="subtitle">
+                        THINK, WRITE, BUILD
+                    </a>
+                </h2>
+                
+        </div>
+        <div id="header-inner" class="inner">
+            <nav id="main-nav">
+                <a id="main-nav-toggle" class="nav-icon"></a>
+                
+                    <a class="main-nav-link" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="main-nav-link" href="/archives">
+                        Archives
+                    </a>
+                    
+            </nav>
+            <nav id="sub-nav">
+                
+                    <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+                    
+                        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+            </nav>
+            <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://algoittm.github.io"></form>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2018-09-20-IA-32Register" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/20/2018-09-20-IA-32Register/" class="article-date">
+  <time datetime="2018-09-20T08:45:00.000Z" itemprop="datePublished">2018-09-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      IA-32 레지스터 메모.
+    </h1>
+  
+
+        <h4> Posted by <a href="https://github.com/Ho95"> Ho95 </a></h4>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="General-Purpose-Register-범용-레지스터-x86-cpu"><a href="#General-Purpose-Register-범용-레지스터-x86-cpu" class="headerlink" title="General Purpose Register (범용 레지스터 ,x86 cpu)"></a>General Purpose Register (범용 레지스터 ,x86 cpu)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-상수, 주소값을 저장시 사용된다.</span><br><span class="line"></span><br><span class="line">-16비트의 크기를 가진다.(과거에는 16비트를 한번에 쓸일이 없음)</span><br><span class="line"></span><br><span class="line">-32비트 이상에서는 레지스터 앞에 확장이라는 뜻의 Extended(E)가 </span><br><span class="line"> 붙고 크기는 0~31비트를 차지하는 32비트이다. (EAX,EBX,ECX,EDX)</span><br><span class="line"></span><br><span class="line">-ABCDX는 H,L로 나뉜다. 예를 들면 AX는 0~15, AH는 15~8, AL은 7~0</span><br></pre></td></tr></table></figure>
+<h3 id="범용-레지스터의-종류-범용이기-때문에-다른-용도로-사용가능"><a href="#범용-레지스터의-종류-범용이기-때문에-다른-용도로-사용가능" class="headerlink" title="범용 레지스터의 종류(범용이기 때문에 다른 용도로 사용가능)"></a>범용 레지스터의 종류(범용이기 때문에 다른 용도로 사용가능)</h3><p><strong>AX(Accumlatior Register)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-산술연산 명령에서 상수/변수값이나 함수의 리턴값을 저장.</span><br></pre></td></tr></table></figure>
+<p><strong>BX(Base Register)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-메모리 위치(포인터)를 주로 저장한다. 인덱스에 사용하거나 인덱스 로 사용 가능하다.</span><br></pre></td></tr></table></figure>
+<p><strong>CX(Counter Register)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-루프 명령어 사용시 루프 횟수를 지정하고 반복 작업을 수행한다.</span><br></pre></td></tr></table></figure>
+<p><strong>DX(Data Resgister)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-레지스터에 저장될 데이터 값이 레지스터 용량을 초과하면 절반을 저장하는 레지스터.</span><br></pre></td></tr></table></figure>
+<p><strong>SI(Source Index Register)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-원본 데이터의 주소를 저장한다.</span><br></pre></td></tr></table></figure>
+<p><strong>DI(Destination Index Register)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-데이터를 보낼 목적지의 주소를 저장한다.</span><br></pre></td></tr></table></figure>
+<p><strong>SP(Stack Pointer Register)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-현재 스택의 탑 주소가 저장된다. 스택의 끝 주소</span><br></pre></td></tr></table></figure>
+<p><strong>BP(Base Pointer Register)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-스택의 시작 주소가 저장된다.</span><br></pre></td></tr></table></figure>
+<h2 id="Segment-Register-세그먼트-레지스터-16bit"><a href="#Segment-Register-세그먼트-레지스터-16bit" class="headerlink" title="Segment Register(세그먼트 레지스터, 16bit)"></a>Segment Register(세그먼트 레지스터, 16bit)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-가상 메모리를 실제 물리 메모리와 맵핑시 사용 되는 레지스터.</span><br></pre></td></tr></table></figure>
+<h3 id="세그먼트-레지스터의-종류"><a href="#세그먼트-레지스터의-종류" class="headerlink" title="세그먼트 레지스터의 종류"></a>세그먼트 레지스터의 종류</h3><p><strong>CS(Code Segment)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-프로그램(코드)의 시작 주소를 저장한다.</span><br></pre></td></tr></table></figure>
+<p><strong>DS(Data Segment)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-현재 사용하는 데이터 영역의 시작 주소를 저장한다.</span><br></pre></td></tr></table></figure>
+<p><strong>SS(Stack Segment)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-스택 영역의 시작 주소를 저장한다.</span><br></pre></td></tr></table></figure>
+<p><strong>ES(Extra Segment)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-메모리 주소 지정을 다루는 스트링 연산에 사용된다. GS도 같은 역할</span><br></pre></td></tr></table></figure>
+<p><strong>FS</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-기타 영역의 시작 주소를 저장한다.</span><br></pre></td></tr></table></figure>
+<h2 id="Special-Propose-Register-특수-목적-레지스터"><a href="#Special-Propose-Register-특수-목적-레지스터" class="headerlink" title="Special Propose Register(특수 목적 레지스터)"></a>Special Propose Register(특수 목적 레지스터)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-직접 값을 읽고 쓸 수 없는 레지스터</span><br></pre></td></tr></table></figure>
+<h3 id="특수-목적-레지스터의-종류"><a href="#특수-목적-레지스터의-종류" class="headerlink" title="특수 목적 레지스터의 종류"></a>특수 목적 레지스터의 종류</h3><p><strong>IP(Instruction Pointer Register)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-현재 수행할 (곧 수행될) 명령어의 주소가 저장됨. 32비트는 EIP</span><br></pre></td></tr></table></figure>
+<p><strong>플래그 레지스터</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-프로세서의 상태를 나타내는 레지스터</span><br></pre></td></tr></table></figure>
+<h3 id="종류"><a href="#종류" class="headerlink" title="종류"></a>종류</h3><p><strong>CF(Carry Flag)</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-부호가 없는 수의 오버플로 발생시 1로 set</span><br></pre></td></tr></table></figure>
+<p><strong>ZF(Zero Flag)</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-연산 명령후 결과값이 0일시 1(true)로 set</span><br></pre></td></tr></table></figure>
+<p><strong>OF(Overflow Flag)</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-부호가 있는 수의 오버플로 발생시 1로 set</span><br></pre></td></tr></table></figure>
+<p><strong>끝~~~</strong></p>
+<p>2018-09-27 : md에 맞게 수정</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://algoittm.github.io/2018/09/20/2018-09-20-IA-32Register/" data-id="ck2zwm9e6000hciotaus6h6bw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Assembly/">Assembly</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/27/2018-09-20-GAS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          GNU Assembler 메모.
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/28/2018-08-62-16-15-00-taste-of-face-detection/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">얼굴 검출의 맛</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Alexa/">Alexa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amazon/">Amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Assembly/">Assembly</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Device-Driver/">Device_Driver</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cuda/">cuda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guide/">guide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lifestyle/">lifestyle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machinelearning/">machinelearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raspberryPi/">raspberryPi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/study/">study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unicode/">unicode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Alexa/" style="font-size: 10px;">Alexa</a> <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Amazon/" style="font-size: 10px;">Amazon</a> <a href="/tags/Assembly/" style="font-size: 20px;">Assembly</a> <a href="/tags/C/" style="font-size: 15px;">C</a> <a href="/tags/Device-Driver/" style="font-size: 15px;">Device_Driver</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/OS/" style="font-size: 10px;">OS</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/guide/" style="font-size: 10px;">guide</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/lifestyle/" style="font-size: 10px;">lifestyle</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/raspberryPi/" style="font-size: 10px;">raspberryPi</a> <a href="/tags/study/" style="font-size: 15px;">study</a> <a href="/tags/unicode/" style="font-size: 10px;">unicode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/13/2019-10-13-Alexa_skill/">Alexa Custom skill 참고</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/17/2019-07-18-very_small_basic_for_machine_learning/">딥러닝을 위한 정말정말 기초 지식1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/02/2019-06-02-Inline_Assembly/">학교 인라인 어셈블리 과제</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/16/2019-05-17-GAS(GNU Assembler)/">학교 GAS 과제</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/10/2019-05-10-NASM(Netwide Assembly)/">학교 NASM 과제</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 algoittm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

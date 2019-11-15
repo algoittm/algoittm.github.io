@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://algoittm.github.io</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/06/05/2018-06-05-09-52-00-algoittm_guide/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/06/11/2018-06-11-12-25-00-about_torbjorn/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/06/12/2018-06-13-commit-message-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/06/19/2018-06-20-Vim-%EA%B2%80%EC%83%89-%EA%B8%B0%EC%B4%88/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/07/10/2018-07-11-enumerate/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/07/10/%EC%9D%B4%ED%84%B0%EB%9F%AC%EB%B8%94%EA%B3%BC-%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/07/19/2018-07-20-%ED%95%9C%EA%B8%80%EC%9E%90%EB%AA%A8%EB%B6%84%EB%A6%AC-%ED%98%84%EC%83%81/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/08/13/2018-08-14-shasum/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/08/28/2018-08-62-16-15-00-taste-of-face-detection/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/09/27/2018-09-20-GAS/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/09/20/2018-09-20-IA-32Register/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/09/30/2018-09-30-kernel_guide/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/10/10/2018-10-10-low_level_IO_with_C/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/10/15/2018-10-15-how_to_use_dd_in_user_app/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/10/29/2018-10-29-file_operation_in_DD/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2018/11/18/2018-11-18-java_memory_struct/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2019/03/10/2019-03-10-About_character_IO_func/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2019/05/03/2019-05-04-Linux_CFS/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2019/05/10/2019-05-10-NASM(Netwide%20Assembly)/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2019/05/16/2019-05-17-GAS(GNU%20Assembler)/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2019/06/02/2019-06-02-Inline_Assembly/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2019/07/17/2019-07-18-very_small_basic_for_machine_learning/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://algoittm.github.io/2019/10/13/2019-10-13-Alexa_skill/</loc>
+        <lastmod>2019-11-15T08:52:08.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

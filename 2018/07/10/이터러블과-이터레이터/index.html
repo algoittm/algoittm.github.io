@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>iterable | ALGOITTM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="enumerate()를 쓰다보면 어쩔 수 없이 iterable과 iterator라는 개념을 학습해야 합니다. iterable이 내용물을 차례대로 반환할 수 있는 객체라면 iterator는 next()로 데이터를 순차적으로 호출할 수 있는 객체를 가리킵니다. 생긴 건 비슷하지만 둘은 완전히 별개의 대상으로 생각하는 게 차라리 속 편합니다.  iterable">
+<meta name="keywords" content="study,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iterable">
+<meta property="og:url" content="http://algoittm.github.io/2018/07/10//이터러블과-이터레이터/index.html">
+<meta property="og:site_name" content="ALGOITTM">
+<meta property="og:description" content="enumerate()를 쓰다보면 어쩔 수 없이 iterable과 iterator라는 개념을 학습해야 합니다. iterable이 내용물을 차례대로 반환할 수 있는 객체라면 iterator는 next()로 데이터를 순차적으로 호출할 수 있는 객체를 가리킵니다. 생긴 건 비슷하지만 둘은 완전히 별개의 대상으로 생각하는 게 차라리 속 편합니다.  iterable">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-15T08:52:08.087Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iterable">
+<meta name="twitter:description" content="enumerate()를 쓰다보면 어쩔 수 없이 iterable과 iterator라는 개념을 학습해야 합니다. iterable이 내용물을 차례대로 반환할 수 있는 객체라면 iterator는 next()로 데이터를 순차적으로 호출할 수 있는 객체를 가리킵니다. 생긴 건 비슷하지만 둘은 완전히 별개의 대상으로 생각하는 게 차라리 속 편합니다.  iterable">
+  
+    <link rel="alternate" href="/atom.xml" title="ALGOITTM" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/bigfoot.js"></script>
+    <div id="banner"></div>
+    <div id="header-outer" class="outer">
+        <div id="header-title" class="inner">
+            <h1 id="logo-wrap">
+                <a href="/" id="logo">
+                    ALGOITTM
+                </a>
+            </h1>
+            
+                <h2 id="subtitle-wrap">
+                    <a href="/" id="subtitle">
+                        THINK, WRITE, BUILD
+                    </a>
+                </h2>
+                
+        </div>
+        <div id="header-inner" class="inner">
+            <nav id="main-nav">
+                <a id="main-nav-toggle" class="nav-icon"></a>
+                
+                    <a class="main-nav-link" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="main-nav-link" href="/archives">
+                        Archives
+                    </a>
+                    
+            </nav>
+            <nav id="sub-nav">
+                
+                    <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+                    
+                        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+            </nav>
+            <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://algoittm.github.io"></form>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-/이터러블과-이터레이터" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/10/이터러블과-이터레이터/" class="article-date">
+  <time datetime="2018-07-10T15:00:00.000Z" itemprop="datePublished">2018-07-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iterable
+    </h1>
+  
+
+        <h4> Posted by <a href="">  </a></h4>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>enumerate()</code>를 쓰다보면 어쩔 수 없이 <code>iterable</code>과 <code>iterator</code>라는 개념을 학습해야 합니다. <code>iterable</code>이 내용물을 차례대로 반환할 수 있는 객체라면 <code>iterator</code>는 <code>next()</code>로 데이터를 순차적으로 호출할 수 있는 객체를 가리킵니다. 생긴 건 비슷하지만 둘은 완전히 별개의 대상으로 생각하는 게 차라리 속 편합니다.</p>
+<h3 id="iterable"><a href="#iterable" class="headerlink" title="iterable"></a>iterable</h3><blockquote>
+<p>Iterable</p>
+<p>An object capable of returning its members one at a time. Examples of iterables include all sequence types (such as list, str, and tuple) and some non-sequence types like dict and file and objects of any classes you define with an <strong>iter</strong>() or <strong>getitem</strong>() method. Iterables can be used in a for loop and in many other places where a sequence is needed (zip(), map(), …). When an iterable object is passed as an argument to the built-in function iter(), it returns an iterator for the object. This iterator is good for one pass over the set of values. When using iterables, it is usually not necessary to call iter() or deal with iterator objects yourself. The for statement does that automatically for you, creating a temporary unnamed variable to hold the iterator for the duration of the loop. See also iterator, sequence, and generator.</p>
+<p>via <a href="https://docs.python.org/3/glossary.html#term-iterable" target="_blank" rel="noopener">python glossary</a></p>
+</blockquote>
+<p><code>list</code>나 <code>str</code> 같은 객체는 순서대로 그 내용물을 꺼내어 쓸 수 있습니다. <code>range()</code>의 경우도 마찬가지이고 <code>dict</code> 같은 경우도 순서는 없지만 하나하나 꺼내어 쓸 수 있다는 점에서 <code>iterable</code>이라고 불립니다.<code>zip()</code>이나 <code>map()</code> 같은 경우도 마찬가집니다.</p>
+<h3 id="iterator"><a href="#iterator" class="headerlink" title="iterator"></a>iterator</h3><blockquote>
+<p>Iterator</p>
+<p>An object representing a stream of data. Repeated calls to the iterator’s next() method return successive items in the stream. When no more data are available a StopIteration exception is raised instead. At this point, the iterator object is exhausted and any further calls to its next() method just raise StopIteration again. Iterators are required to have an <strong>iter</strong>() method that returns the iterator object itself so every iterator is also iterable and may be used in most places where other iterables are accepted. One notable exception is code which attempts multiple iteration passes. A container object (such as a list) produces a fresh new iterator each time you pass it to the iter() function or use it in a for loop. Attempting this with an iterator will just return the same exhausted iterator object used in the previous iteration pass, making it appear like an empty container.</p>
+<p>via <a href="https://docs.python.org/3/glossary.html#term-iterator" target="_blank" rel="noopener">python glossary</a></p>
+</blockquote>
+<p><code>next()</code> 메소드로 다음 항목을 불러올 수 있는 객체를 <code>iterator</code>라고 합니다. 마지막 데이터에서 다음 항목을 불러올 수 없을 경우 StopIteration exception을 발생시키며 이후 시도되는 어떠한 <code>next()</code> 메소드에 대하여도 StopIteration exception을 발생시키게 됩니다. 모든 <code>iterator</code> 객체는 <code>__iter__()</code> 함수를 내장해야 하므로 모든 <code>iterator</code> 객체는 <code>iterable</code> 합니다.</p>
+<p>다만 <code>list</code>와 같은 컨테이너 객체는 <code>for</code> 반복문이나 <code>iter()</code> 함수에 넘길 때마다 새로운 <code>iterator</code> 객체를 발생시키므로 매번 <code>iterator</code> 객체를 새로 생성할 필요가 없습니다. 이외의 경우에는 <code>iterator</code> 객체를 새로 생성하지 않는 한 빈 컨테이너에 대해서 반복문을 실행하는 것과 같은 효과를 내게 됩니다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://algoittm.github.io/2018/07/10/이터러블과-이터레이터/" data-id="ck2zwm9dv0008ciot991pfbsx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/10/2018-07-11-enumerate/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          enumerate()
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/19/2018-06-20-Vim-검색-기초/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vim 검색 기초</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Alexa/">Alexa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amazon/">Amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Assembly/">Assembly</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Device-Driver/">Device_Driver</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cuda/">cuda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guide/">guide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lifestyle/">lifestyle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machinelearning/">machinelearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raspberryPi/">raspberryPi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/study/">study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unicode/">unicode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Alexa/" style="font-size: 10px;">Alexa</a> <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Amazon/" style="font-size: 10px;">Amazon</a> <a href="/tags/Assembly/" style="font-size: 20px;">Assembly</a> <a href="/tags/C/" style="font-size: 15px;">C</a> <a href="/tags/Device-Driver/" style="font-size: 15px;">Device_Driver</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/OS/" style="font-size: 10px;">OS</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/guide/" style="font-size: 10px;">guide</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/lifestyle/" style="font-size: 10px;">lifestyle</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/raspberryPi/" style="font-size: 10px;">raspberryPi</a> <a href="/tags/study/" style="font-size: 15px;">study</a> <a href="/tags/unicode/" style="font-size: 10px;">unicode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/13/2019-10-13-Alexa_skill/">Alexa Custom skill 참고</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/17/2019-07-18-very_small_basic_for_machine_learning/">딥러닝을 위한 정말정말 기초 지식1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/02/2019-06-02-Inline_Assembly/">학교 인라인 어셈블리 과제</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/16/2019-05-17-GAS(GNU Assembler)/">학교 GAS 과제</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/10/2019-05-10-NASM(Netwide Assembly)/">학교 NASM 과제</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 algoittm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

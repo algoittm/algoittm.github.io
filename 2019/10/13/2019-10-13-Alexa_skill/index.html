@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Alexa Custom skill 참고 | ALGOITTM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="시작 8월 중순부터 알렉사 스킬을 만들어 보고 있습니다. (회사 업무로…)  알렉사는 아마존에서 만든 AI입니다. 삼성 빅스비나, 애플 시리 같은 것입니다.  (자세한 내용은 https://ko.wikipedia.org/wiki/%EC%95%84%EB%A7%88%EC%A1%B4_%EC%95%8C%EB%A0%89%EC%82%AC) 아마존에서 라즈베리파이나 다">
+<meta name="keywords" content="Amazon,Alexa,raspberryPi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alexa Custom skill 참고">
+<meta property="og:url" content="http://algoittm.github.io/2019/10/13/2019-10-13-Alexa_skill/index.html">
+<meta property="og:site_name" content="ALGOITTM">
+<meta property="og:description" content="시작 8월 중순부터 알렉사 스킬을 만들어 보고 있습니다. (회사 업무로…)  알렉사는 아마존에서 만든 AI입니다. 삼성 빅스비나, 애플 시리 같은 것입니다.  (자세한 내용은 https://ko.wikipedia.org/wiki/%EC%95%84%EB%A7%88%EC%A1%B4_%EC%95%8C%EB%A0%89%EC%82%AC) 아마존에서 라즈베리파이나 다">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-15T08:52:08.087Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alexa Custom skill 참고">
+<meta name="twitter:description" content="시작 8월 중순부터 알렉사 스킬을 만들어 보고 있습니다. (회사 업무로…)  알렉사는 아마존에서 만든 AI입니다. 삼성 빅스비나, 애플 시리 같은 것입니다.  (자세한 내용은 https://ko.wikipedia.org/wiki/%EC%95%84%EB%A7%88%EC%A1%B4_%EC%95%8C%EB%A0%89%EC%82%AC) 아마존에서 라즈베리파이나 다">
+  
+    <link rel="alternate" href="/atom.xml" title="ALGOITTM" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/bigfoot.js"></script>
+    <div id="banner"></div>
+    <div id="header-outer" class="outer">
+        <div id="header-title" class="inner">
+            <h1 id="logo-wrap">
+                <a href="/" id="logo">
+                    ALGOITTM
+                </a>
+            </h1>
+            
+                <h2 id="subtitle-wrap">
+                    <a href="/" id="subtitle">
+                        THINK, WRITE, BUILD
+                    </a>
+                </h2>
+                
+        </div>
+        <div id="header-inner" class="inner">
+            <nav id="main-nav">
+                <a id="main-nav-toggle" class="nav-icon"></a>
+                
+                    <a class="main-nav-link" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="main-nav-link" href="/archives">
+                        Archives
+                    </a>
+                    
+            </nav>
+            <nav id="sub-nav">
+                
+                    <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+                    
+                        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+            </nav>
+            <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://algoittm.github.io"></form>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-10-13-Alexa_skill" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/13/2019-10-13-Alexa_skill/" class="article-date">
+  <time datetime="2019-10-13T07:05:00.000Z" itemprop="datePublished">2019-10-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Alexa Custom skill 참고
+    </h1>
+  
+
+        <h4> Posted by <a href="https://github.com/Ho95"> ho95 </a></h4>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="시작"><a href="#시작" class="headerlink" title="시작"></a>시작</h1><p>8월 중순부터 알렉사 스킬을 만들어 보고 있습니다. (회사 업무로…)</p>
+<p>알렉사는 아마존에서 만든 AI입니다.  삼성 빅스비나, 애플 시리 같은 것입니다.</p>
+<p>(자세한 내용은 <a href="https://ko.wikipedia.org/wiki/%EC%95%84%EB%A7%88%EC%A1%B4_%EC%95%8C%EB%A0%89%EC%82%AC" target="_blank" rel="noopener">https://ko.wikipedia.org/wiki/%EC%95%84%EB%A7%88%EC%A1%B4_%EC%95%8C%EB%A0%89%EC%82%AC</a>) 아마존에서 라즈베리파이나 다른 보드에도 적용 할 수있게 SDK를 배포중입니다.</p>
+<p>아직 한글은 지원하지 않습니다. 영어, 일본어외 2-3가지를 지원 하는데, 영어를 기준으로 하겠습니다.</p>
+<p>알렉사 스킬의 전체적인 흐름은 알렉사SDK가 설치된 단말에서 스킬을 이용해 요청을 보냅니다.</p>
+<p>요청을 Endpoint에 지정해둔 서버로 보내서 처리후 그것을 다시 알렉사에게 보내 응답을 하게됩니다.</p>
+<p>추가로 하드웨어 제어라던지 동작을 하려면 endpoint 단에서 작업을 해주시면 됩니다.</p>
+<h2 id="알렉사-스킬이란-무엇인가"><a href="#알렉사-스킬이란-무엇인가" class="headerlink" title="알렉사 스킬이란 무엇인가"></a>알렉사 스킬이란 무엇인가</h2><p>알렉사 스킬은 스마트폰의 어플리케이션 같은 개념입니다.</p>
+<p>그 중 커스텀 스킬이 있는데, 이것은 사용자와 알렉사간의 대화를 직접 만들 수 있습니다.</p>
+<p>많은 예제들이 인터넷상에 올라와 있습니다. </p>
+<p>스킬 제작을 위해선 developer.amazon.com에 계정을 만들고, Alexa skills kit 메뉴로 들어가면 됩니다.</p>
+<p>우리가 신경 쓸 것은 1)Invocation Name / 2)Intent / 3)Endpoint 입니다.</p>
+<h2 id="Invacation-name"><a href="#Invacation-name" class="headerlink" title="Invacation name"></a>Invacation name</h2><p>현재 만드는 스킬을 호출할 때 사용할 이름입니다.</p>
+<p>알렉사에게 명령을 할때 “Alexa, ask (Invocation name) to 명령어”라고 말을합니다.</p>
+<p>ask 말고 open도 사용할 수 있습니다. Open (invocation name)</p>
+<p>이름의 규칙은 2단어 이상, 그리고 숫자도 표현도 영어로 적어주어여 합니다. (1이 아닌 one)</p>
+<p>그리고 프로그래밍 언어처럼 예약어가 있어서, ask, open 같은 런칭워드, 그리고 Alexa는 X.</p>
+<p>이는 밑에 설명할 intent에도 동일하게 적용됩니다.</p>
+<h2 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h2><p>프로그래밍 언어로보면 하나의 함수처럼 보면 될 것 같습니다.</p>
+<p>우리가 알렉사에게 말을 했을때, Intent속 “Sample Utterances”란 것에 대응 되는 문장이 있으면</p>
+<p>그 인텐트를 실행하게 됩니다.(인텐트의 실제 실행 내용은 Endpoint 부분에서 다룹니다.)</p>
+<p>Sample Utterances는 알렉사에게 물어볼 문장 혹은 단어들입니다.</p>
+<p>예시로 speakHello라는 intent가 있고 그 인텐트 안에 Sample Utterances로 </p>
+<p>“Hi alexa How are you?”가 있으면 알렉사는 sepakHello 인텐트를 실행하게 됩니다.</p>
+<p>기본적으로 웹 화면에서 작성이 가능하지만 직접 json을 이용하여 작성도 가능합니다.</p>
+<h2 id="Endpoint"><a href="#Endpoint" class="headerlink" title="Endpoint"></a>Endpoint</h2><p>Endpoint는 Sample Utterances에서 실행할 intent를 정하여 알렉사가 요청한 것을 </p>
+<p>실질적으로 수행할 내용이 적혀 있는 백엔드의 주소입니다.</p>
+<p>아마존 AWS의 Lambda를 이용하는 방법과 직접 서버를 만들어 요청을 처리해 줄 수있습니다.</p>
+<p>라즈베리파이의 GPIO도 제어를 하려고 하는데, AWS IOT와 Lambda 연동을 시도 했으나, 성공하지</p>
+<p>못하여 자체 서버를 만드는 방법을 이용 하였습니다. 언어는 pyton, js, java등이 있는데, 저는 파이썬을</p>
+<p>사용하였습니다. 그리고 주소는 꼭 보안상의 이유로 https만 받습니다. 람다의 경우 ARN을 그대로</p>
+<p>복붙 하시면 됩니다.</p>
+<h2 id="구현"><a href="#구현" class="headerlink" title="구현"></a>구현</h2><p>H/W</p>
+<p>1)라즈베리파이3 2대</p>
+<p>2)알렉사 사용을 위한 마이크 스피커</p>
+<p>3)GPIO 작동 확인을 위한 점퍼선2개와 LED1개</p>
+<p>S/W</p>
+<p>1)파이썬(flask, flask-ask, paho-mqtt, RPi.GPIO) 모듈</p>
+<p>2)공유기 사용중이므로 외부망에서의 접속을 위한 localtunnel.(대체품 ngrok)</p>
+<p>3)알렉사 SDK</p>
+<p>라즈베리 1대와 스피커 마이크는 알렉사 단말, 나머지 1대는 요청 처리용 라즈베리입니다.</p>
+<p>단말은 SDK, 서버 라즈베리에서 응답이오면 처리해줄 코드(py)만 있으면 됩니다. 스킬은 아마존에서…</p>
+<p>저에게 문제는 요청을 처리 해주는 서버단이 였습니다. 서버 클라이언트의 개념을 잘 모르는 터라</p>
+<p>통신 프로그래밍이 어려웠으나… 구글링하며 공부하여 구현 하였습니다.</p>
+<p>처음에는 라즈베리 1대에 백엔드단까지 구현하여 사용 하려고 했으나 전원이 완전히 꺼졌다</p>
+<p>켜지는 상황에서는 문제되는 상황이 있었기 때문에 분리하여 구현 했습니다.(지금 생각해보니 당연한 것…)</p>
+<p>파이썬의 flask 모듈로 서버가 실행되고, flask-ask로 intent 요청을 처리하도록 했습니다.</p>
+<p>그리고 intent 요청이 처리될 때, mqtt를 이용하여 간단하게 숫자 같은것을 보내 단말 라즈베리에서</p>
+<p>그것을 이용하여 GPIO 제어를 합니다. 코드의 형식은 아마존 문서를 보면 자세하게 설명돼 있습니다.</p>
+<p>저는 회사 공유기에 서버 라즈베리가 물려져 있고, 알렉사 스킬에서 endpoint를 https만 받기 때문에</p>
+<p>localtunnel을 이용하여 https 도메인을 만들었습니다. mqtt도 MQTT Broker라고 중개 서버가 필요한데,</p>
+<p>이것은 mqttclould라는 곳을 이용하여 해결 하였습니다. (자체적으로도 구현 가능하나 저는 못합니다…)</p>
+<h2 id="끝"><a href="#끝" class="headerlink" title="끝!"></a>끝!</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://algoittm.github.io/2019/10/13/2019-10-13-Alexa_skill/" data-id="ck2zwm9et0014ciotj780lbu9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Alexa/">Alexa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Amazon/">Amazon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/raspberryPi/">raspberryPi</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/17/2019-07-18-very_small_basic_for_machine_learning/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">딥러닝을 위한 정말정말 기초 지식1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Alexa/">Alexa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amazon/">Amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Assembly/">Assembly</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Device-Driver/">Device_Driver</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cuda/">cuda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guide/">guide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lifestyle/">lifestyle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machinelearning/">machinelearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raspberryPi/">raspberryPi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/study/">study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unicode/">unicode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Alexa/" style="font-size: 10px;">Alexa</a> <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Amazon/" style="font-size: 10px;">Amazon</a> <a href="/tags/Assembly/" style="font-size: 20px;">Assembly</a> <a href="/tags/C/" style="font-size: 15px;">C</a> <a href="/tags/Device-Driver/" style="font-size: 15px;">Device_Driver</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/OS/" style="font-size: 10px;">OS</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/guide/" style="font-size: 10px;">guide</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/lifestyle/" style="font-size: 10px;">lifestyle</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/machinelearning/" style="font-size: 10px;">machinelearning</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/raspberryPi/" style="font-size: 10px;">raspberryPi</a> <a href="/tags/study/" style="font-size: 15px;">study</a> <a href="/tags/unicode/" style="font-size: 10px;">unicode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/13/2019-10-13-Alexa_skill/">Alexa Custom skill 참고</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/17/2019-07-18-very_small_basic_for_machine_learning/">딥러닝을 위한 정말정말 기초 지식1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/02/2019-06-02-Inline_Assembly/">학교 인라인 어셈블리 과제</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/16/2019-05-17-GAS(GNU Assembler)/">학교 GAS 과제</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/10/2019-05-10-NASM(Netwide Assembly)/">학교 NASM 과제</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 algoittm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
