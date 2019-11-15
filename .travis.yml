@@ -8,15 +8,6 @@ branches:
   only:
   - source
 
-before_install:
-- npm install -g hexo
-- npm un hexo-renderer-marked --save
-- npm i hexo-renderer-markdown-it --save
-- npm install hexo-autonofollow --save
-- npm install --save hexo-auto-canonical
-- npm install hexo-generator-seo-friendly-sitemap --save
-- npm install hexo-generator-feed --save
-
 install:
 - npm install
 
