@@ -23,14 +23,14 @@ install:
 
 # 주의: 'YOUR NAME'와 'YOUR EMAIL'를 변경해야합니다.
 before_script:
-- git config --global user.name 'Joonho Wohn'
-- git config --global user.email 'junarwohn@hanyang.ac.kr'
+- git config --global user.email 'junarwohn@github.com'
+- git config --global user.name 'Travis-CI'
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 
-# after_script:
-#   - git config credential.helper "store --file=.git/credentials"
-#   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-#   - node ./node_modules/grunt-cli/bin/grunt release
+after_script:
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - node ./node_modules/grunt-cli/bin/grunt release
 
 # 블로그를 빌드 후 배포합니다.
 script:
