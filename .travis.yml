@@ -2,21 +2,20 @@
 language: node_js
 
 node_js:
-- 8
-
+- stable
 # Hexo source 코드는 source branch에서 작업되고 있어야합니다.
 branches:
   only:
   - source
 
-before_install:
-- npm install -g hexo
-- npm un hexo-renderer-marked 
-- npm i hexo-renderer-markdown-it
-- npm install hexo-autonofollow 
-- npm install hexo-auto-canonical
-- npm install hexo-generator-seo-friendly-sitemap
-- npm install hexo-generator-feed
+# before_install:
+# - npm install -g hexo
+# - npm un hexo-renderer-marked 
+# - npm i hexo-renderer-markdown-it
+# - npm install hexo-autonofollow 
+# - npm install hexo-auto-canonical
+# - npm install hexo-generator-seo-friendly-sitemap
+# - npm install hexo-generator-feed
 
 
 install:
@@ -24,8 +23,8 @@ install:
 
 # 주의: 'YOUR NAME'와 'YOUR EMAIL'를 변경해야합니다.
 before_script:
-- git config --global user.email 'doomsheart@naver.com'
-- git config --global user.name 'Travis-CI'
+- git config --global user.name 'Joonho Wohn'
+- git config --global user.email 'junarwohn@hanyang.ac.kr'
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 
 # after_script:
