@@ -8,6 +8,7 @@
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
+        <h4> Posted by <a href="<%= post.githublink %>"> <%= post.author %> </a></h4>
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
